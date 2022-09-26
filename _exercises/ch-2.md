@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Exercises Ch. 2
-description: Select exercises from Python Crash Course
+description: Select exercises from Python Crash Course (Hello!!!)
 ---
 
 
