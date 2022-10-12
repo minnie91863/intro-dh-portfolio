@@ -1,3 +1,9 @@
+---
+layout: page
+title: The Plant Initiative
+description: Here I evaluate The Plant Initiative project.
+---
+
 ## The Plant Initiative
 
 ### Source
