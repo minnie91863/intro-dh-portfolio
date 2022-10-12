@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Reading Reflection No.1"
+date:   "2022-10-12"
+categories: reading reflection
+---
+
 ## Defining the Novel: Reflection on “Introduction to the Digital Humanities”
 
 
