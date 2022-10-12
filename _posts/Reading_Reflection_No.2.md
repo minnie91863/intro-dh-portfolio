@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Reading Reflection No.2"
+date:   "2022-10-12"
+categories: reading reflection
+---
+
 ## The Exponential Growth of Documentation: Vannear Bush’s Insight in “As We May Think”
 
 ### Reading Reflection No.2
