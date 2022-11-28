@@ -1,0 +1,3 @@
+https://tuftsgis.maps.arcgis.com/apps/View/index.html?appid=c59a5696992e40c6b6e332e54ca2697a
+
+Class demo of GIS for Gibbon - Chapter 5
