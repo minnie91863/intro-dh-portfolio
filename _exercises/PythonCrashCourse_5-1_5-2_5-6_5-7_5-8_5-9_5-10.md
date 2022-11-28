@@ -1,385 +1,251 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "7c9a7bea",
-   "metadata": {},
-   "source": [
-    "### 5-1"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 1,
-   "id": "cfec0eef",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "is snack == 'chips'? I predict True.\n",
-      "True\n",
-      "is snack == 'cookie'? I predict False.\n",
-      "False\n",
-      "is snack == 'pie'? I predict True.\n",
-      "True\n",
-      "is snack == 'chips'? I predict False.\n",
-      "False\n",
-      "is snack == 'apple'? I predict True.\n",
-      "True\n",
-      "is snack == 'chips'? I predict False.\n",
-      "False\n",
-      "is snack == 'goldfish'? I predict True.\n",
-      "True\n",
-      "is snack == 'apple'? I predict False.\n",
-      "False\n",
-      "is snack == 'cheese'? I predict True.\n",
-      "True\n",
-      "is snack == 'pie'? I predict False.\n",
-      "False\n"
-     ]
-    }
-   ],
-   "source": [
-    "snack = \"chips\"\n",
-    "print(\"is snack == 'chips'? I predict True.\")\n",
-    "print (snack == \"chips\")\n",
-    "\n",
-    "print(\"is snack == 'cookie'? I predict False.\")\n",
-    "print (snack == \"cookie\")\n",
-    "\n",
-    "snack = \"pie\"\n",
-    "print(\"is snack == 'pie'? I predict True.\")\n",
-    "print (snack == \"pie\")\n",
-    "\n",
-    "print(\"is snack == 'chips'? I predict False.\")\n",
-    "print (snack == \"chips\")\n",
-    "\n",
-    "snack = \"apple\"\n",
-    "print(\"is snack == 'apple'? I predict True.\")\n",
-    "print (snack == \"apple\")\n",
-    "\n",
-    "print(\"is snack == 'chips'? I predict False.\")\n",
-    "print (snack == \"chips\")\n",
-    "\n",
-    "snack = \"goldfish\"\n",
-    "print(\"is snack == 'goldfish'? I predict True.\")\n",
-    "print (snack == \"goldfish\")\n",
-    "\n",
-    "print(\"is snack == 'apple'? I predict False.\")\n",
-    "print (snack == \"apple\")\n",
-    "\n",
-    "snack = \"cheese\"\n",
-    "print(\"is snack == 'cheese'? I predict True.\")\n",
-    "print (snack == \"cheese\")\n",
-    "\n",
-    "print(\"is snack == 'pie'? I predict False.\")\n",
-    "print (snack == \"pie\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "40e99e20",
-   "metadata": {},
-   "source": [
-    "### 5-2"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 7,
-   "id": "c66abfae",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "is str1 == str2? I predit False\n",
-      "False\n",
-      "is str1 == 'Cat'.lower()? I predict true\n",
-      "True\n",
-      " is num1 == num2? I predict false\n",
-      "False\n",
-      " is num1 > num2? I predict false\n",
-      "False\n",
-      "is num1 < num 2? I predict true\n",
-      "True\n",
-      "is num1 >= num2?  I predict false\n",
-      "False\n",
-      "is num1 <= num2? I predict true\n",
-      "True\n",
-      "is c1 == c1 or c2? I predict true\n",
-      "True\n",
-      "is c1 == c1 and c2? I predict false\n",
-      "False\n",
-      "is 0 in the list? I predict true\n",
-      "True\n",
-      "is 8 in the list? I predict false\n",
-      "False\n"
-     ]
-    }
-   ],
-   "source": [
-    "str1 = \"cat\"\n",
-    "str2 = \"dog\"\n",
-    "print( \"is str1 == str2? I predit False\")\n",
-    "print(str1 == str2)\n",
-    "\n",
-    "print( \"is str1 == 'Cat'.lower()? I predict true\")\n",
-    "print(str1 == 'Cat'.lower())\n",
-    "\n",
-    "num1 = 1\n",
-    "num2 = 2\n",
-    "print(\" is num1 == num2? I predict false\")\n",
-    "print(num1 == num2)\n",
-    "print(\" is num1 > num2? I predict false\") \n",
-    "print(num1 > num2)\n",
-    "print (\"is num1 < num 2? I predict true\")\n",
-    "print(num1 < num2)\n",
-    "print( \"is num1 >= num2?  I predict false\")\n",
-    "print(num1 >= num2)\n",
-    "print(\"is num1 <= num2? I predict true\")\n",
-    "print(num1 <= num2)\n",
-    "\n",
-    "c1 = \"red\"\n",
-    "c2 = \"blue\"\n",
-    "print(\"is c1 == c1 or c2? I predict true\")\n",
-    "print(c1 == c1 or c2)\n",
-    "print(\"is c1 == c1 and c2? I predict false\")\n",
-    "print(c1 == (c1 and c2))\n",
-    "\n",
-    "list = [0,1,2,3]\n",
-    "print(\"is 0 in the list? I predict true\")\n",
-    "print(0 in list)\n",
-    "        \n",
-    "print(\"is 8 in the list? I predict false\")\n",
-    "print(8 in list)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "1d720216",
-   "metadata": {},
-   "source": [
-    "### 5-6"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 9,
-   "id": "75bc76ba",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "you are a \n",
-      "adult\n"
-     ]
-    }
-   ],
-   "source": [
-    "age = 21\n",
-    "print(\"you are a \")\n",
-    "if age < 2:\n",
-    "    print(\"baby!\")\n",
-    "elif age >= 2 and age < 4:\n",
-    "    print(\"toddler!\")\n",
-    "elif age >= 4 and age < 13:\n",
-    "    print(\"kid!\")\n",
-    "elif age >= 13 and age < 20:\n",
-    "    print(\"teen!\")\n",
-    "elif age >= 20 and age < 65:\n",
-    "    print(\"adult\")\n",
-    "elif age >= 65:\n",
-    "    print(\"elder!\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "a818934d",
-   "metadata": {},
-   "source": [
-    "### 5-7"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 10,
-   "id": "64872253",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "You really like mango\n",
-      "You really like lychee\n"
-     ]
-    }
-   ],
-   "source": [
-    "favorite_fruits = [\"lychee\", \"mango\", \"watermelon\"]\n",
-    "if \"apple\" in favorite_fruits:\n",
-    "    print(\"You really like apple\")\n",
-    "if \"pear\" in favorite_fruits:\n",
-    "    print(\"You really like pear\")\n",
-    "if \"mango\" in favorite_fruits:\n",
-    "    print(\"You really like mango\")\n",
-    "if \"banana\" in favorite_fruits:\n",
-    "    print(\"You really like banana\")\n",
-    "if \"lychee\" in favorite_fruits:\n",
-    "    print(\"You really like lychee\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "978c9f4d",
-   "metadata": {},
-   "source": [
-    "### 5-8"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 11,
-   "id": "23d88611",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Hello A\n",
-      " thank you for loggin in again.\n",
-      "Hello B\n",
-      " thank you for loggin in again.\n",
-      "Hello C\n",
-      " thank you for loggin in again.\n",
-      "Hello D\n",
-      " thank you for loggin in again.\n",
-      "Hello E\n",
-      " thank you for loggin in again.\n",
-      "Hello Admin\n",
-      " would you like to see a status report?\n"
-     ]
-    }
-   ],
-   "source": [
-    "usernames = [\"a\", \"b\", \"c\", \"d\", \"e\", \"admin\"]\n",
-    "for name in usernames:\n",
-    "    print(\"Hello \" + name.title())\n",
-    "    if name == \"admin\":\n",
-    "        print(\" would you like to see a status report?\")\n",
-    "    else:\n",
-    "        print(\" thank you for loggin in again.\")\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "b3143ffa",
-   "metadata": {},
-   "source": [
-    "### 5-9"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 3,
-   "id": "dc85f7ac",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "we need to find some users\n"
-     ]
-    }
-   ],
-   "source": [
-    "usernames = [\"a\", \"b\", \"c\", \"d\", \"e\", \"admin\"]\n",
-    "usernames.clear()\n",
-    "if usernames:\n",
-    "    for name in usernames:\n",
-    "        print(\"Hello \" + name.title())\n",
-    "        if name == \"admin\":\n",
-    "            print(\" would you like to see a status report?\")\n",
-    "        else:\n",
-    "            print(\" thank you for loggin in again.\")\n",
-    "    \n",
-    "else:\n",
-    "    print(\"we need to find some users\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "f7506268",
-   "metadata": {},
-   "source": [
-    "###  5-10"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 6,
-   "id": "78d5183e",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "the username f is available\n",
-      "the username g is available\n",
-      "the username h is available\n",
-      "b, choose a new name please\n",
-      "a, choose a new name please\n"
-     ]
-    }
-   ],
-   "source": [
-    "current_users = [\"a\", \"b\", \"c\", \"d\", \"e\"]\n",
-    "new_users = [\"f\",  \"g\", \"h\", \"b\", \"a\"]\n",
-    "\n",
-    "for name in new_users:\n",
-    "    if name.lower() in current_users:\n",
-    "        print( name + \", choose a new name please\")\n",
-    "    else:\n",
-    "        print(\"the username \" + name + \" is available\")"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "92a8527e",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.9.13"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+---
+layout: page
+title: PythonCrashCourse_5-1_5-2_5-6_5-7_5-8_5-9_5-10
+description: Python Basics 3
+---
+
+### 5-1
+
+
+```python
+snack = "chips"
+print("is snack == 'chips'? I predict True.")
+print (snack == "chips")
+
+print("is snack == 'cookie'? I predict False.")
+print (snack == "cookie")
+
+snack = "pie"
+print("is snack == 'pie'? I predict True.")
+print (snack == "pie")
+
+print("is snack == 'chips'? I predict False.")
+print (snack == "chips")
+
+snack = "apple"
+print("is snack == 'apple'? I predict True.")
+print (snack == "apple")
+
+print("is snack == 'chips'? I predict False.")
+print (snack == "chips")
+
+snack = "goldfish"
+print("is snack == 'goldfish'? I predict True.")
+print (snack == "goldfish")
+
+print("is snack == 'apple'? I predict False.")
+print (snack == "apple")
+
+snack = "cheese"
+print("is snack == 'cheese'? I predict True.")
+print (snack == "cheese")
+
+print("is snack == 'pie'? I predict False.")
+print (snack == "pie")
+```
+
+    is snack == 'chips'? I predict True.
+    True
+    is snack == 'cookie'? I predict False.
+    False
+    is snack == 'pie'? I predict True.
+    True
+    is snack == 'chips'? I predict False.
+    False
+    is snack == 'apple'? I predict True.
+    True
+    is snack == 'chips'? I predict False.
+    False
+    is snack == 'goldfish'? I predict True.
+    True
+    is snack == 'apple'? I predict False.
+    False
+    is snack == 'cheese'? I predict True.
+    True
+    is snack == 'pie'? I predict False.
+    False
+    
+
+### 5-2
+
+
+```python
+str1 = "cat"
+str2 = "dog"
+print( "is str1 == str2? I predit False")
+print(str1 == str2)
+
+print( "is str1 == 'Cat'.lower()? I predict true")
+print(str1 == 'Cat'.lower())
+
+num1 = 1
+num2 = 2
+print(" is num1 == num2? I predict false")
+print(num1 == num2)
+print(" is num1 > num2? I predict false") 
+print(num1 > num2)
+print ("is num1 < num 2? I predict true")
+print(num1 < num2)
+print( "is num1 >= num2?  I predict false")
+print(num1 >= num2)
+print("is num1 <= num2? I predict true")
+print(num1 <= num2)
+
+c1 = "red"
+c2 = "blue"
+print("is c1 == c1 or c2? I predict true")
+print(c1 == c1 or c2)
+print("is c1 == c1 and c2? I predict false")
+print(c1 == (c1 and c2))
+
+list = [0,1,2,3]
+print("is 0 in the list? I predict true")
+print(0 in list)
+        
+print("is 8 in the list? I predict false")
+print(8 in list)
+```
+
+    is str1 == str2? I predit False
+    False
+    is str1 == 'Cat'.lower()? I predict true
+    True
+     is num1 == num2? I predict false
+    False
+     is num1 > num2? I predict false
+    False
+    is num1 < num 2? I predict true
+    True
+    is num1 >= num2?  I predict false
+    False
+    is num1 <= num2? I predict true
+    True
+    is c1 == c1 or c2? I predict true
+    True
+    is c1 == c1 and c2? I predict false
+    False
+    is 0 in the list? I predict true
+    True
+    is 8 in the list? I predict false
+    False
+    
+
+### 5-6
+
+
+```python
+age = 21
+print("you are a ")
+if age < 2:
+    print("baby!")
+elif age >= 2 and age < 4:
+    print("toddler!")
+elif age >= 4 and age < 13:
+    print("kid!")
+elif age >= 13 and age < 20:
+    print("teen!")
+elif age >= 20 and age < 65:
+    print("adult")
+elif age >= 65:
+    print("elder!")
+```
+
+    you are a 
+    adult
+    
+
+### 5-7
+
+
+```python
+favorite_fruits = ["lychee", "mango", "watermelon"]
+if "apple" in favorite_fruits:
+    print("You really like apple")
+if "pear" in favorite_fruits:
+    print("You really like pear")
+if "mango" in favorite_fruits:
+    print("You really like mango")
+if "banana" in favorite_fruits:
+    print("You really like banana")
+if "lychee" in favorite_fruits:
+    print("You really like lychee")
+```
+
+    You really like mango
+    You really like lychee
+    
+
+### 5-8
+
+
+```python
+usernames = ["a", "b", "c", "d", "e", "admin"]
+for name in usernames:
+    print("Hello " + name.title())
+    if name == "admin":
+        print(" would you like to see a status report?")
+    else:
+        print(" thank you for loggin in again.")
+
+```
+
+    Hello A
+     thank you for loggin in again.
+    Hello B
+     thank you for loggin in again.
+    Hello C
+     thank you for loggin in again.
+    Hello D
+     thank you for loggin in again.
+    Hello E
+     thank you for loggin in again.
+    Hello Admin
+     would you like to see a status report?
+    
+
+### 5-9
+
+
+```python
+usernames = ["a", "b", "c", "d", "e", "admin"]
+usernames.clear()
+if usernames:
+    for name in usernames:
+        print("Hello " + name.title())
+        if name == "admin":
+            print(" would you like to see a status report?")
+        else:
+            print(" thank you for loggin in again.")
+    
+else:
+    print("we need to find some users")
+```
+
+    we need to find some users
+    
+
+###  5-10
+
+
+```python
+current_users = ["a", "b", "c", "d", "e"]
+new_users = ["f",  "g", "h", "b", "a"]
+
+for name in new_users:
+    if name.lower() in current_users:
+        print( name + ", choose a new name please")
+    else:
+        print("the username " + name + " is available")
+```
+
+    the username f is available
+    the username g is available
+    the username h is available
+    b, choose a new name please
+    a, choose a new name please
+    
+
+
+```python
+
+```
