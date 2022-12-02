@@ -1,3 +1,9 @@
+---
+layout: page
+title: GIS Map - Gibbon Chapter 8
+description: Map of Gibbon Chapter 8 using ArcGIS
+---
+
 ## GIS Map - Gibbon Chapter 8
 
 Link to Map:
