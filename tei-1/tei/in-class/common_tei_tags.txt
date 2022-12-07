@@ -1,0 +1,14 @@
+For a complete list see https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html
+
+<p>paragraph text</p>
+<lg>Use for a group of lines from poetry</lg>
+<l>Use for a single line of poetry with a group of poetry<l>
+<div>Use for general divisions</div>
+<head>Use for a heading</head>
+<pb/> Use for start of page (self closing tag)
+<hi>Use for highlighted text</hi>
+<quote>Use for a quotation</quote>
+<geoName>Use for geographic feature</geoName>
+<persName>Use for people</persName>
+<placeName>Use for places</placeName>
+<note>Use for footnotes, endnotes, marginal notes</note>
