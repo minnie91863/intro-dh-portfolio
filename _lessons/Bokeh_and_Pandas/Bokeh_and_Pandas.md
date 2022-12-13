@@ -48,7 +48,7 @@ show(p)
 
 Photo of Graph
 
-![png](Bokeh_and_Pandas_Photos/Screenshot%202022-12-12%20124450.png)
+![png](Bokeh_and_Pandas/Bokeh_and_Pandas_Photos/Screenshot%202022-12-12%20124450.png)
 
 ### Loading Data in Pandas
 
