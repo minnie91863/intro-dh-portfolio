@@ -1,8 +1,4 @@
----
-layout: page
-title: Visualizing Data with Bokeh and Pandas
-description: Programming Historian Lesson on using Bokeh and Panda libraries to visualize .csv data
----
+<!-- not the one on portfolio page -->
 
 # Visualizing Data with Bokeh and Pandas
 

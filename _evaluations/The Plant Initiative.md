@@ -8,7 +8,7 @@ description: Here I evaluate The Plant Initiative project.
 
 ### Source
 
-https://labs.jstor.org/projects/plant-humanities-initiative/
+[https://labs.jstor.org/projects/plant-humanities-initiative/](https://labs.jstor.org/projects/plant-humanities-initiative/)
 
 
 ### Evaluation
@@ -19,9 +19,7 @@ As a digital library of human interactions with botany, this resource could assi
 
 
 
-
-
-![Plant-Humanities-Lab-Jackfruit.JPG](attachment:Plant-Humanities-Lab-Jackfruit.JPG)
+![Plant-Humanities-Lab-Jackfruit.JPG](Screenshot 2022-12-13 141555.png)
 
 
 To exercise the search functionality, I looked up one of my favorite fruits to see if it had any significant historical ties—jackfruit. Typing in the keyword “jackfruit” into the search bar produces a page consisting of its taxon name (Artocarpus heterophyllus), the name’s pronunciation, an image, and links to other resources and reference materials. I like how before searching, the search function suggests key names and topics relevant to what I put in thus far. It suggested “jackfruit wood”, “jackfruit sandwiches”, “Jackfruit Festival”, and a few other options which could be relevant if I were conducting general research on what humans may find to be important about the fruit. 

@@ -10,4 +10,7 @@ _site/
 .bundle/
 vendor/
 
+# Added manually
+*.zip
+
 # End of https://www.toptal.com/developers/gitignore/api/jekyll

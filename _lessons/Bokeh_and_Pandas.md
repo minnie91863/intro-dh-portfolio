@@ -8,7 +8,7 @@ description: Programming Historian Lesson on using Bokeh and Panda libraries to 
 
 ## Source
 
-[https://programminghistorian.org/en/lessons/visualizing-with-bokeh] (https://programminghistorian.org/en/lessons/visualizing-with-bokeh) 
+[https://programminghistorian.org/en/lessons/visualizing-with-bokeh](https://programminghistorian.org/en/lessons/visualizing-with-bokeh) 
 
 ## Reflection
 
