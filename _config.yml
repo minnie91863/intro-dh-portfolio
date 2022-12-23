@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Intro to DH Portfolio
-email: your-email@example.com
+title: Intro to DH Portfolio Fall 2022
+email: Minnie.Xie@tufts.edu
 description: >- # this means to ignore newlines until "baseurl:"
 
 baseurl: "/intro-dh-portfolio" # CHANGE THIS! the subpath of your site, e.g. /blog
