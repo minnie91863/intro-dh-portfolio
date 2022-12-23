@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chronicalling America API Assignment
+title: Chronicling America API Assignment
 description: Class demo on saving dfs as csvs.
 ---
 
