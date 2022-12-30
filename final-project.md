@@ -36,38 +36,160 @@ By using the artists’ birthplaces and nationalities, rather than mapping the m
 
 Out of the entire dataset, there were only 244 location matches of the 28269 items. In this case, if I wanted to track all of the work in the dataset, I would need to manually mark the locations to the places on the map for every missed option. The first unmatched location, for instance, listed what was supposed to be New York City, New York as Newyork, Argyll, and Bute, Scotland. 
 
+![png](/_final_project/screen_captures/wront_newyork.png)
+
 On the other hand, some of the matched cases were only partially accurate, since some artists had multiple nationalities. In this case where the artist was British and Italian, ArcGIS was only able to recognize the Italian part, since their birth and death places were both in Italy. 
+
+![png](/_final_project/screen_captures/multinational.png)
 
 Clearly, this dataset still needs much more refinement. I decided from this point to scrap the hosted feature layers I had just attempted to make, and instead work on cleaning up the data. In order to make the dataset easier to use for this assignment, I narrowed the scope even further by only considering work listed under the “Fine Arts” department, and only considering the artists’ nationalities. For artists that have multiple nationalities, I will be arbitrarily selecting the first one listed. 
 
+However, I wasn't able to make the nationalities legible to ArcGIS. The nationalities weren't formatted as location names, and those with multiple nationalities continued pose issues for interpreting the data correctly. I opted for birthplaces instead.
 
+![png](/_final_project/screen_captures/second_attempt_still_wrong.png)
 
-```python
+This change made much more useful results!
 
-```
+![png](/_final_project/screen_captures/much_better.png)
 
-TODO (Insert photos here of data preparation process in arcgis)
+I attempted to run a distance analysis between the CMOA and each location, but it never completed. I instead included a widget in the website to add and measure custom distances.
+
+![png](/_final_project/screen_captures/pending_results.png)
+
+Please refer to the code section below to walkthorugh the steps on how I prepared the csv file to fit the scope of this project
+
 
 ## Code
 
-(idk write some code that calculates the distances and plots them on a map?)
-
-## Artifact
-
-Below are screencaptures of my resulting GIS visualization on the distance between the work and the CMOA museum
-
-A link to my ArcGIS map can be found here
-
-## Analysis
+For the unabridged version of the code, please review the file "Data Preparation" in my portfolio github repo.
 
 
 ```python
-
+import spacy
+import csv
+import pandas as pd
 ```
+
+Isolating work just in the Fine Arts department
+
+
+```python
+with open('cmoa.csv', 'rt', encoding = 'utf8') as inp, open('cmoa_fine_art.csv', 'wt', encoding = 'utf8') as out:
+    writer = csv.writer(out)
+    for row in csv.reader(inp):
+        if row[9] == "Fine Arts":
+            writer.writerow(row)
+```
+
+At a glance, it seems like each row has an arbitrary row of whitespace separating each of the rows that have information, so I'll attempt to remove those
+
+
+```python
+df = pd.read_csv('cmoa_fine_art.csv')
+df.to_csv('cmoa_fine_art1.csv', index = False)
+```
+
+I also need to remove any "Notes" since they may cause issues in the csv file format.
+
+
+```python
+df = pd.read_csv('cmoa_fine_art1.csv', error_bad_lines = False).dropna()
+df.to_csv('cmoa_fine_art2.csv', index = False)
+```
+
+After attempting to also copy over the header of the csv file, I realized it would be quicker to simploy copy and paste it manually
+
+Let's also remove all the rows that do not include a nationality, which is at index 24. Alternatively, we can reference that information with the "nationality" key word
+
+
+```python
+filter = df["nationality"] != ""
+df_clean = df[filter]
+```
+
+
+```python
+df.to_csv('cmoa_fine_art3.csv', index = False)
+```
+
+Let's compare the lengths of the csv files to see if any changes were made
+
+
+```python
+original = pd.read_csv('cmoa.csv')
+results0 = pd.read_csv('cmoa_fine_art.csv')
+results1 = pd.read_csv('cmoa_fine_art1.csv')
+results2 = pd.read_csv('cmoa_fine_art2.csv')
+results3 = pd.read_csv('cmoa_fine_art3.csv')
+```
+
+
+```python
+print(len(original))
+print(len(results0))
+print(len(results1))
+print(len(results2))
+print(len(results3))
+```
+
+28269
+8972
+8972
+1177
+1177
+
+
+While some of the cleaning may have been done incorrectly or may have been repetative, the resulting 1177 rows is now much more usable than the original 28269 for this project-- 4.16% of the number of pieces we began with!
+
+The largest change was when I reduced the scope from the entire collection to the Fine Arts department. This superficially showcases the proportion of work in the CMOA that is considered as Fine Art (although what can be defined as such is an entirely separate discussion). Interestingly enough, in this dataset, Contemporary Art is labelled as a separate department. I can therefore infer that the work in the Fine Arts department is somewhat historical.
+
+
+```python
+df = pd.read_csv("cmoa_fine_art3.csv")
+df.loc[:, "nationality"]
+```
+
+Below, I'm printing out specific information to get a glance at how usable the information is in order to narrow down what I include in my hosted feature layer
+
+
+```python
+df.loc[:, "death_place"]
+```
+
+I'm going to try to input the nationality data into ArcGIS to see if it can recognize the phrasing as a location. If not, I will need to continue to process the data to convert the nationality to a location. If all ese fails, I may need to use alternative methods to visualize this dataset.
+
+While ArcGIS was able to recognize more locations this time around, it still struggled to handle multiple nationalities, and misinterpreted many as incorrect locations. This means I need to either continue cleaning the naitonalities data, or use an alternative data point such as the birth location.
+
+Let's do a quick test on ArcGIS using the birth location instead
+
+ArcGIS handleded the birth_place information much better, and only struggled to match up Tokyo. Since there weren't many unmatched plots, I went ahead and matched those manually. After this process, 221 of the 1176 works remained unmatched. In my cleaning process, since I didn't focus on birth_place, I didn't remove the values that had null or blank fiends for the birth_place. The remainig 221 works did not have birth_place information, so for the sake of this assignment they will be left out.
+
+## Artifact
+
+Below are screencaptures of my resulting GIS visualization on the artists represented in the CMOA collection's fine art department compared to the location of the CMOA adn world GDPs from 1960-2016.
+
+A link to my ArcGIS map can be found [here](https://tuftsgis.maps.arcgis.com/apps/webappviewer/index.html?id=ad3872fe290d4bdaa0b55dcd9df75bc5)
+
+[https://tuftsgis.maps.arcgis.com/apps/webappviewer/index.html?id=ad3872fe290d4bdaa0b55dcd9df75bc5](https://tuftsgis.maps.arcgis.com/apps/webappviewer/index.html?id=ad3872fe290d4bdaa0b55dcd9df75bc5)
+
+![png](/_final_project/screen_captures/building_web_app.png)
+
+![png](/_final_project/screen_captures/using_web_app.png)
+
+
+## Analysis
+
+The results of mapping out the birthplaces of the Fine Art artists in the CMOA dataset reveal some strong trends. 
+
+The majority of the artists whose work is considered to be in the Fine Art department were born in Europe, more specifically Western Europe. It’s important to note that each pin represents a work, and not the artist. Therefore, certain locations have multiple pins, since some artists have multiple works in the CMOA collection. This distant read leaves me questioning the definition of fine art, and why it was distinct from contemporary art in the dataset--what does this showcase about the CMOA’s value system, or how it defines historical significance? 
+
+The preservation and physical documentation of history through art --the backbone of museums--is not practiced equally across the globe, which may also impact whose work is represented at the CMOA. The map visualizes which regions of the world favor this form of historical documentation, and which regions the CMOA considers worth representing. Boundaries such as culture, language, and politics may also impact who the CMOA includes in their collection.
+
+I included an online layer of the world GDP from the past few decades to compare with the edited CMOA dataset. Considering the correlation between fine art with modern economic wealth, there is somewhat of a link between areas of economic power and areas whose history in the form of fine art is considered valuable enough to be preserved in the Western lens. It’s interesting to see these value systems align, considering that both definitions of value by the CMOA and World Bank, headquartered in Washington D.C., are under American eyes. Through this pattern, one can infer that economic and historic values are closely related in the United States. 
+
+
 
 ## Conclusion
 
 
-```python
-
-```
+Although these results did not offer insight into British colonialism, they did provide equally interesting results. I originally planned to investigate the migration of artwork. Instead, I ended up with a wonderful visualization of representation in museums, considerations on how the CMOA defines fine art, and questions about how the United States assigns value, therefore affecting the education of the general public. Who and what gets represented in higher institutions such as museums can impact their and other groups' social reputations. It is up to the musem to decide how they want to curate their view of past and present,  authentically or not.
