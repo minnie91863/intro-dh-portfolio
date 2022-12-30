@@ -14616,7 +14616,4 @@ df.head()
 df.to_csv('margin_notes.csv')
 ```
 
-
-```python
-
-```
+Please view tei-1 directory in portfolio github to see resulting .csv
