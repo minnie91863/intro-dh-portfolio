@@ -36,25 +36,25 @@ By using the artists’ birthplaces and nationalities, rather than mapping the m
 
 Out of the entire dataset, there were only 244 location matches of the 28269 items. In this case, if I wanted to track all of the work in the dataset, I would need to manually mark the locations to the places on the map for every missed option. The first unmatched location, for instance, listed what was supposed to be New York City, New York as Newyork, Argyll, and Bute, Scotland. 
 
-![png](../_final_project/screen_captures/wront_newyork.png)
+![png](wront_newyork.png)
 
 On the other hand, some of the matched cases were only partially accurate, since some artists had multiple nationalities. In this case where the artist was British and Italian, ArcGIS was only able to recognize the Italian part, since their birth and death places were both in Italy. 
 
-![png](/_final_project/screen_captures/multinational.png)
+![png](multinational.png)
 
 Clearly, this dataset still needs much more refinement. I decided from this point to scrap the hosted feature layers I had just attempted to make, and instead work on cleaning up the data. In order to make the dataset easier to use for this assignment, I narrowed the scope even further by only considering work listed under the “Fine Arts” department, and only considering the artists’ nationalities. For artists that have multiple nationalities, I will be arbitrarily selecting the first one listed. 
 
 However, I wasn't able to make the nationalities legible to ArcGIS. The nationalities weren't formatted as location names, and those with multiple nationalities continued pose issues for interpreting the data correctly. I opted for birthplaces instead.
 
-![png](/_final_project/screen_captures/second_attempt_still_wrong.png)
+![png](second_attempt_still_wrong.png)
 
 This change made much more useful results!
 
-![png](/_final_project/screen_captures/much_better.png)
+![png](much_better.png)
 
 I attempted to run a distance analysis between the CMOA and each location, but it never completed. I instead included a widget in the website to add and measure custom distances.
 
-![png](/_final_project/screen_captures/pending_results.png)
+![png](pending_results.png)
 
 Please refer to the code section below to walkthorugh the steps on how I prepared the csv file to fit the scope of this project
 
@@ -172,9 +172,9 @@ A link to my ArcGIS map can be found [here](https://tuftsgis.maps.arcgis.com/app
 
 [https://tuftsgis.maps.arcgis.com/apps/webappviewer/index.html?id=ad3872fe290d4bdaa0b55dcd9df75bc5](https://tuftsgis.maps.arcgis.com/apps/webappviewer/index.html?id=ad3872fe290d4bdaa0b55dcd9df75bc5)
 
-![png](/_final_project/screen_captures/building_web_app.png)
+![png](building_web_app.png)
 
-![png](/_final_project/screen_captures/using_web_app.png)
+![png](using_web_app.png)
 
 
 ## Analysis
